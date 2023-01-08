@@ -29,7 +29,7 @@
           <button class="btnSearch">Search</button>
         </form>
         <div class="currentDate">
-          <h3>Date</h3>
+          <h2>Date</h2>
         </div>
         <div class="weatherIcon">
           <img
@@ -39,14 +39,13 @@
             class="float-left"
           />
         </div>
-        <div class="currentWeather">
-          <h2>Weather description</h2>
+        <div class="weatherDescription">
+          <h3>Weather description</h3>
         </div>
         <div class="mainCity">
-          <h4 id="searchCity">City</h4>
+          <p id="searchCity">City</p>
         </div>
         <h1 id="temperature">24</h1>
-
         <div class="row">
           <div class="col" id="metricCelcius">°C</div>
           <div class="col"><span id="seperator">|</span></div>
@@ -55,20 +54,34 @@
 
         <div class="row">
           <div class="col">
+            <p>
               Humidity: <span id="humidity"></span>%
-              </div>
-              <div class="col">
+              </p>
+          </div>
+          <div class="col">
+              <p>
               Wind: <span id="wind"></span> m/h
-              </div>
+              </p>
+          </div>
             
           </div>
         </div>
         <div class="row" id="weekDay">
-          <div class="col">Sun</div>
-          <div class="col">Mon</div>
-          <div class="col">Tue</div>
-          <div class="col">Wed</div>
-          <div class="col">Thu</div>
+          <div class="col">
+            <p>Sun</p>
+          </div>
+          <div class="col">
+            <p>Mon</p>
+          </div>
+          <div class="col">
+            <p>Tue</p>
+          </div>
+          <div class="col">
+            <p>Wed</p>
+          </div>
+          <div class="col">
+            <p>Thu</p>
+          </div>
         </div>
         <div class="row" id="weekDayIcon">
           <div class="col">
@@ -113,11 +126,21 @@
           </div>
         </div>
         <div class="row" id="weekDayTemperature">
-          <div class="col">16°C</div>
-          <div class="col">16°C</div>
-          <div class="col">16°C</div>
-          <div class="col">16°C</div>
-          <div class="col">16°C</div>
+          <div class="col">
+            <p>16°C</p>
+          </div>
+          <div class="col">
+            <p>16°C</p>
+          </div>
+          <div class="col">
+            <p>16°C</p>
+          </div>
+          <div class="col">
+            <p>16°C</p>
+          </div>
+          <div class="col">
+            <p>16°C</p>
+          </div>
         </div>
         <button class="btnCurrent" id="current-location-button">
           Weather in current location
