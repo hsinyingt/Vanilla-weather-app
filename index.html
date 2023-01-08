@@ -19,19 +19,41 @@
   </head>
   <body>
     <div class="container">
-      <div class="weather-app-wrapper">
-        <form id="searchForm">
-          <input
-            type="Search"
-            placeholder="Search the city"
-            id="search-text-input"
-          />
-          <button class="btnSearch">Search</button>
-        </form>
-        <div class="currentDate">
-          <h2>Date</h2>
-        </div>
-        <div class="weatherIcon">
+      <form id="searchForm">
+        <input
+          type="Search"
+          placeholder="Search the city"
+          id="search-text-input"
+        />
+        <button class="btnSearch">Search</button>
+      </form>
+      <div class="currentDate">Date</div>
+      <img
+        src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+        alt="Clear"
+        id="icon"
+        class="currentIcon"
+      />
+      <div class="weatherDescription">Weather description</div>
+      <div class="mainCity" id="searchCity">City</div>
+      <div class="currentTemperature" id="temperature">24</div>
+      <div class="units">
+        <span id="metricCelcius">°C</span>
+        <span id="seperator">|</span>
+        <span id="metricFahrenheit">°F</span>
+      </div>
+
+      <div class="humidityDisplay">Humidity: <span id="humidity"></span>%</div>
+      <div class="windDisplay">Wind: <span id="wind"></span> m/h</div>
+      <div class="row" id="weekDay">
+        <div class="col">Sun</div>
+        <div class="col">Mon</div>
+        <div class="col">Tue</div>
+        <div class="col">Wed</div>
+        <div class="col">Thu</div>
+      </div>
+      <div class="row" id="weekDayIcon">
+        <div class="col">
           <img
             src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
             alt="Clear"
@@ -39,121 +61,67 @@
             class="float-left"
           />
         </div>
-        <div class="weatherDescription">
-          <h3>Weather description</h3>
+        <div class="col">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="Clear"
+            id="icon"
+            class="float-left"
+          />
         </div>
-        <div class="mainCity">
-          <p id="searchCity">City</p>
+        <div class="col">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="Clear"
+            id="icon"
+            class="float-left"
+          />
         </div>
-        <h1 id="temperature">24</h1>
-        <div class="row">
-          <div class="col" id="metricCelcius">°C</div>
-          <div class="col"><span id="seperator">|</span></div>
-          <div class="col" id="metricFahrenheit">°F</div>
+        <div class="col">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="Clear"
+            id="icon"
+            class="float-left"
+          />
         </div>
-
-        <div class="row">
-          <div class="col">
-            <p>
-              Humidity: <span id="humidity"></span>%
-              </p>
-          </div>
-          <div class="col">
-              <p>
-              Wind: <span id="wind"></span> m/h
-              </p>
-          </div>
-            
-          </div>
+        <div class="col">
+          <img
+            src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+            alt="Clear"
+            id="icon"
+            class="float-left"
+          />
         </div>
-        <div class="row" id="weekDay">
-          <div class="col">
-            <p>Sun</p>
-          </div>
-          <div class="col">
-            <p>Mon</p>
-          </div>
-          <div class="col">
-            <p>Tue</p>
-          </div>
-          <div class="col">
-            <p>Wed</p>
-          </div>
-          <div class="col">
-            <p>Thu</p>
-          </div>
+      </div>
+      <div class="row" id="weekDayTemperature">
+        <div class="col">
+          <p>16°C</p>
         </div>
-        <div class="row" id="weekDayIcon">
-          <div class="col">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Clear"
-              id="icon"
-              class="float-left"
-            />
-          </div>
-          <div class="col">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Clear"
-              id="icon"
-              class="float-left"
-            />
-          </div>
-          <div class="col">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Clear"
-              id="icon"
-              class="float-left"
-            />
-          </div>
-          <div class="col">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Clear"
-              id="icon"
-              class="float-left"
-            />
-          </div>
-          <div class="col">
-            <img
-              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
-              alt="Clear"
-              id="icon"
-              class="float-left"
-            />
-          </div>
+        <div class="col">
+          <p>16°C</p>
         </div>
-        <div class="row" id="weekDayTemperature">
-          <div class="col">
-            <p>16°C</p>
-          </div>
-          <div class="col">
-            <p>16°C</p>
-          </div>
-          <div class="col">
-            <p>16°C</p>
-          </div>
-          <div class="col">
-            <p>16°C</p>
-          </div>
-          <div class="col">
-            <p>16°C</p>
-          </div>
+        <div class="col">
+          <p>16°C</p>
         </div>
-        <button class="btnCurrent" id="current-location-button">
-          Weather in current location
-        </button>
-        <div class="codeOwner">
-          <a
-            href="https://github.com/hsinyingt/Weather-app"
-            target="_blank"
-            class="Me"
-            >Open-source code
-          </a>
-          by Hsin-Ying Tsai
+        <div class="col">
+          <p>16°C</p>
         </div>
+        <div class="col">
+          <p>16°C</p>
+        </div>
+      </div>
+      <button class="btnCurrent" id="current-location-button">
+        Weather in current location
+      </button>
+      <div class="codeOwner">
+        <a
+          href="https://github.com/hsinyingt/Weather-app"
+          target="_blank"
+          class="Me"
+          >Open-source code
+        </a>
+        by Hsin-Ying Tsai
       </div>
     </div>
   </body>
