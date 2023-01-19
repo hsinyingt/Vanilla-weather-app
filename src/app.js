@@ -5,7 +5,7 @@ let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
 let months = [
   "Jan",
   "Feb",
-  "March",
+  "Mar",
   "Apr",
   "May",
   "Jun",
@@ -27,6 +27,12 @@ function displayWeatherCondition(response) {
   document.querySelector("#searchCity").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
     response.data.main.temp
+  );
+  document.querySelector("#weatherDescription").innerHTML =
+    response.data.weather[0].description;
+  document.querySelector("#humidity").innerHTML = response.data.main.humidity;
+  document.querySelector("#wind").innerHTML = Math.round(
+    response.data.wind.speed
   );
 }
 

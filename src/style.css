@@ -90,6 +90,7 @@ img.currentIcon {
   font-size: 32px;
   line-height: 39px;
   color: #042268;
+  text-transform: capitalize;
 }
 
 .mainCity {
