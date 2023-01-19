@@ -1,27 +1,25 @@
-let now = new Date();
-
-let h3 = document.querySelector("h3");
-let days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
-let months = [
-  "Jan",
-  "Feb",
-  "Mar",
-  "Apr",
-  "May",
-  "Jun",
-  "Jul",
-  "Aug",
-  "Sep",
-  "Oct",
-  "Nov",
-  "Dec",
-];
-let currentYear = now.getFullYear();
-let currentDay = days[now.getDay()];
-let currentMonth = months[now.getMonth()];
-let currentDate = now.getDate();
-
-h3.innerHTML = `${currentDay}, ${currentMonth} ${currentDate}, ${currentYear}`;
+function formatData(timestamp) {
+  let date = new Date(timestamp);
+  let hours = date.getHours();
+  if (hours < 10) {
+    hours = `0${hours}`;
+  }
+  let minute = date.getMinutes();
+  if (minute < 10) {
+    hours = `0${minute}`;
+  }
+  let days = [
+    "Sunday",
+    "Monday",
+    "Tuesday",
+    "Wednesday",
+    "Thursday",
+    "Friday",
+    "Saturday",
+  ];
+  let day = days[date.getDay()];
+  return `${day} ${hours}:${minute}`;
+}
 
 function displayWeatherCondition(response) {
   document.querySelector("#searchCity").innerHTML = response.data.name;
@@ -33,6 +31,9 @@ function displayWeatherCondition(response) {
   document.querySelector("#humidity").innerHTML = response.data.main.humidity;
   document.querySelector("#wind").innerHTML = Math.round(
     response.data.wind.speed
+  );
+  document.querySelector("#currentDate").innerHTML = formatData(
+    response.data.dt * 1000
   );
 }
 

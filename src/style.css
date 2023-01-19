@@ -90,6 +90,9 @@ img.currentIcon {
   font-size: 32px;
   line-height: 39px;
   color: #042268;
+}
+
+.weatherDescription:first-letter {
   text-transform: capitalize;
 }
 
