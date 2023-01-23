@@ -21,6 +21,38 @@ function formatData(timestamp) {
   return `${day} ${hours}:${minute}`;
 }
 
+function displayForecast() {
+  let forecastElement = document.querySelector("#forecast");
+
+  let days = ["Thu", "Fri", "Sat", "Sun"];
+
+  let forecastHTML = `<div class="row">`;
+  days.forEach(function (day) {
+    forecastHTML =
+      forecastHTML +
+      `
+      <div class="col-2">
+            <div class="weather-forecast-date">${day}</div>
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt="Clear"
+              id="icon"
+              class="cardImage"
+              width="60px"
+            />
+            <div class="weather-forecast-temperature">
+              <span class="weather-forecast-temperature-max">16°</span>
+              <span class="weather-forecast-temperature-min">12°</span>
+            </div>
+       </div>
+  `;
+  });
+
+  forecastHTML = forecastHTML + `</div>`;
+  forecastElement.innerHTML = forecastHTML;
+  console.log(forecastHTML);
+}
+
 function displayWeatherCondition(response) {
   document.querySelector("#searchCity").innerHTML = response.data.name;
   document.querySelector("#temperature").innerHTML = Math.round(
@@ -106,3 +138,4 @@ let fahrenheitLink = document.querySelector("#metricFahrenheit");
 fahrenheitLink.addEventListener("click", displayFahrenheitTemperature);
 
 searchCity("Prague");
+displayForecast();
