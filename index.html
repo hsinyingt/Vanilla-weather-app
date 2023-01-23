@@ -20,14 +20,16 @@
   </head>
   <body>
     <div class="container">
-      <form id="searchForm">
-        <input
-          type="Search"
-          placeholder="Search the city"
-          id="search-text-input"
-        />
-        <button class="btnSearch">Search</button>
-      </form>
+      <div class="form">
+        <form id="searchForm">
+          <input
+            type="Search"
+            placeholder="Search the city"
+            id="search-text-input"
+          />
+          <button class="btnSearch">Search</button>
+        </form>
+      </div>
       <div class="currentDate">
         Last updated: <span id="currentDate">Date</span>
       </div>
@@ -53,7 +55,24 @@
         Humidity: <span id="humidity">12</span>%
       </div>
       <div class="windDisplay">Wind: <span id="wind">12</span> m/h</div>
-
+      <div class="weather-forecast" id="forecast">
+        <div class="row" id="weekDay">
+          <div class="col-2">
+            <div class="weather-forecast-date">Sun</div>
+            <img
+              src="https://ssl.gstatic.com/onebox/weather/64/sunny.png"
+              alt="Clear"
+              id="icon"
+              class="cardImage"
+              width="60px"
+            />
+            <div class="weather-forecast-temperature">
+              <span class="weather-forecast-temperature-max">16°</span>
+              <span class="weather-forecast-temperature-min">12°</span>
+            </div>
+          </div>
+        </div>
+      </div>
       <button class="btnCurrent" id="current-location-button">
         Weather in current location
       </button>
